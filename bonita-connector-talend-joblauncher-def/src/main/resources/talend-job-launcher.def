@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definition:ConnectorDefinition xmlns:definition="http://www.bonitasoft.org/ns/connector/definition/6.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <id>talend-job-launcher</id>
+    <version>1.0.0</version>
+    <icon>talend.png</icon>
+
+	<category id="talend" icon="talend.png" />
+	
+	<input name="projectName" type="java.lang.String" mandatory="true" />
+	<input name="jobName" type="java.lang.String" mandatory="true" />
+	<input name="jobVersion" type="java.lang.String" mandatory="true" />
+	<input name="jobParameters" type="java.lang.List" mandatory="false" />
+	<input name="printOutput" type="java.lang.Boolean" defaultValue="false" />
+
+	<output name="bufferOutput" type="java.lang.Object" />
+	
+	<page id="jobPage">
+		<widget id="projectName" inputName="projectName" xsi:type="definition:Text" />
+		<widget id="jobName" inputName="jobName" xsi:type="definition:Text" />
+		<widget id="jobVersion" inputName="jobVersion" xsi:type="definition:Text" />
+		<widget id="jobParameters" inputName="jobParameters" xsi:type="definition:Array" cols="2" rows="-1" fixedCols="true" fixedRows="false">
+			<colsCaption>key</colsCaption>
+			<colsCaption>value</colsCaption>
+		</widget>
+		<widget id="printOutput" inputName="printOutput" xsi:type="definition:Checkbox" />
+	</page>
+</definition:ConnectorDefinition>

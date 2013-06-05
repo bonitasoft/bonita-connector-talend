@@ -1,0 +1,38 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>bonita-connectors</artifactId>
+        <groupId>org.bonitasoft.connectors</groupId>
+        <version>6.0.1-SNAPSHOT</version>
+    </parent>
+	
+	<artifactId>bonita-connector-talend</artifactId>
+	<packaging>pom</packaging>
+	<version>6.0.1-SNAPSHOT</version>
+	
+	<modules>
+		<module>bonita-connector-talend-joblauncher-def</module>
+		<module>bonita-connector-talend-joblauncher-impl</module>
+	</modules>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.4</version>
+                <configuration>
+                    <tagBase>https://svn.bonitasoft.org/bonita-connectors-6/tags/connectors/bonita-connector-talend</tagBase>
+                    <preparationGoals>clean install</preparationGoals>
+                    <goals>deploy</goals>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <scm>
+        <developerConnection>scm:svn:https://svn.bonitasoft.org/bonita-connectors-6/branches/connectors/bonita-connector-talend/bonita-connector-talend-6.0.x</developerConnection>
+    </scm>
+
+
+</project>
