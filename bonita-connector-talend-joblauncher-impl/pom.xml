@@ -49,7 +49,7 @@
 		<dependency>
 			<groupId>org.bonitasoft.connectors</groupId>
 			<artifactId>bonita-connector-talend-joblauncher-def</artifactId>
-			<version>6.0.0</version>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.bonitasoft.engine</groupId>
@@ -82,7 +82,7 @@
 					<dependency>
 						<groupId>org.bonitasoft.connectors</groupId>
 						<artifactId>bonita-connectors-assembly</artifactId>
-						<version>6.0.0</version>
+						<version>6.0.1</version>
 					</dependency>
 				</dependencies>
 				<executions>
