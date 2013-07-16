@@ -30,6 +30,9 @@
 
     <scm>
         <developerConnection>scm:git:git@github.com:bonitasoft/bonita-connector-talend.git</developerConnection>
+        <connection>scm:git:git@github.com:bonitasoft/bonita-connector-talend.git</connection>
+        <url>https://github.com/bonitasoft/bonita-connector-talend</url>
+        <tag>HEAD</tag>
     </scm>
 
 
