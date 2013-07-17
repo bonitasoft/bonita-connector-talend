@@ -3,7 +3,7 @@
 	<parent>
 		<groupId>org.bonitasoft.connectors</groupId>
 		<artifactId>bonita-connector-talend</artifactId>
-		<version>6.1.0-rc-02</version>
+		<version>6.1.0-SNAPSHOT</version>
 	</parent>
 	<artifactId>bonita-connector-talend-joblauncher-impl</artifactId>
 
@@ -49,7 +49,7 @@
 		<dependency>
 			<groupId>org.bonitasoft.connectors</groupId>
 			<artifactId>bonita-connector-talend-joblauncher-def</artifactId>
-			<version>6.1.0-rc-02</version>
+			<version>6.1.0-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>org.bonitasoft.engine</groupId>
