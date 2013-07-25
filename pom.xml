@@ -3,13 +3,12 @@
 	<parent>
 		<artifactId>bonita-connectors</artifactId>
 		<groupId>org.bonitasoft.connectors</groupId>
-		<version>6.1.0-rc-01</version>
+        <version>6.1.0-SNAPSHOT</version>
 	</parent>
 	
 	<artifactId>bonita-connector-talend</artifactId>
 	<packaging>pom</packaging>
-	<version>6.1.0-SNAPSHOT</version>
-	
+
 	<modules>
 		<module>bonita-connector-talend-joblauncher-def</module>
 		<module>bonita-connector-talend-joblauncher-impl</module>
