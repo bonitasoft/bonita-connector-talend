@@ -8,7 +8,7 @@
 	
 	<artifactId>bonita-connector-talend</artifactId>
 	<packaging>pom</packaging>
-	<version>6.1.0-SNAPSHOT</version>
+	<version>6.1.0-rc-03</version>
 	
 	<modules>
 		<module>bonita-connector-talend-joblauncher-def</module>
@@ -32,7 +32,7 @@
         <developerConnection>scm:git:git@github.com:bonitasoft/bonita-connector-talend.git</developerConnection>
         <connection>scm:git:git@github.com:bonitasoft/bonita-connector-talend.git</connection>
         <url>https://github.com/bonitasoft/bonita-connector-talend</url>
-        <tag>HEAD</tag>
+        <tag>bonita-connector-talend-6.1.0-rc-03</tag>
     </scm>
 
 
