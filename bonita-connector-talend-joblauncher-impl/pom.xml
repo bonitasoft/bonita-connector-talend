@@ -3,9 +3,10 @@
 	<parent>
 		<groupId>org.bonitasoft.connectors</groupId>
 		<artifactId>bonita-connector-talend</artifactId>
-		<version>6.1.0-rc-07</version>
+		<version>6.1.0-SNAPSHOT</version>
 	</parent>
 	<artifactId>bonita-connector-talend-joblauncher-impl</artifactId>
+  <version>6.1.0-rc-04</version>
 
 	<properties>
 		<implementation.id>talend-job-launcher</implementation.id>
@@ -49,7 +50,7 @@
 		<dependency>
 			<groupId>org.bonitasoft.connectors</groupId>
 			<artifactId>bonita-connector-talend-joblauncher-def</artifactId>
-			<version>6.1.0-rc-07</version>
+			<version>6.1.0-rc-04</version>
 		</dependency>
 		<dependency>
 			<groupId>org.bonitasoft.engine</groupId>
@@ -121,9 +122,4 @@
             <url>file://${project.basedir}/lib</url>
         </repository>
     </repositories>
-
-
-  <scm>
-    <tag>bonita-connector-talend-6.1.0-rc-07</tag>
-  </scm>
 </project>
