@@ -8,7 +8,7 @@
 	
 	<artifactId>bonita-connector-talend</artifactId>
 	<packaging>pom</packaging>
-	<version>6.1.0-rc-04</version>
+	<version>6.1.0-SNAPSHOT</version>
 	
 	<modules>
 		<module>bonita-connector-talend-joblauncher-def</module>
