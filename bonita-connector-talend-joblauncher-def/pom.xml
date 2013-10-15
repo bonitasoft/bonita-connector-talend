@@ -7,5 +7,4 @@
   </parent>
   
   <artifactId>bonita-connector-talend-joblauncher-def</artifactId>
-  <version>6.1.0-rc-04</version>
 </project>
