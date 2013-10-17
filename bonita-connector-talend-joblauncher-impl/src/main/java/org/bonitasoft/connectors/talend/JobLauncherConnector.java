@@ -74,16 +74,15 @@ public class JobLauncherConnector extends AbstractConnector {
 	@Override
 	protected void executeBusinessLogic() throws ConnectorException {
 		final String jobClassName = projectName.toLowerCase() + "." + jobName.toLowerCase() + "_" + jobVersion.replace('.', '_') + "." + jobName;
-		try {
-			Class<?> clazz = null;
-			try{
-				clazz = Class.forName(jobClassName, true, Thread.currentThread().getContextClassLoader());
-			}catch(ClassNotFoundException cnfe){
-				throw new ConnectorException("The TalendJob class "+jobClassName+" has not been found in the process classpath.");
-			}
 
-			// final Method runJobMethod = clazz.getMethod(RUN_JOB_METHOD, new Class[] { String[].class });
-			// final Object jobInstance = clazz.newInstance();
+		Class<?> clazz = null;
+		try{
+			clazz = Class.forName(jobClassName, true, Thread.currentThread().getContextClassLoader());
+		}catch(ClassNotFoundException cnfe){
+			throw new ConnectorException("The TalendJob class "+jobClassName+" has not been found in the process classpath.");
+		}
+
+		try{
 			final TalendJob jobInstance = (TalendJob) clazz.newInstance();
 
 			Collection<String> jobParams = new ArrayList<String>();
@@ -93,9 +92,7 @@ public class JobLauncherConnector extends AbstractConnector {
 				}
 			}
 
-			// bufferOutput = (java.lang.String[][]) runJobMethod.invoke(jobInstance, new Object[] { jobParams.toArray(new String[] {}) });
 			bufferOutput = jobInstance.runJob(jobParams.toArray(new String[] {}));
-
 			setOutputParameter(BUFFER_OUTPUT, bufferOutput);
 
 			if (printOutput) {
