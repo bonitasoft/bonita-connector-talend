@@ -25,6 +25,7 @@ import java.util.Map;
 import org.bonitasoft.engine.connector.AbstractConnector;
 import org.bonitasoft.engine.connector.ConnectorException;
 import org.bonitasoft.engine.connector.ConnectorValidationException;
+
 import routines.system.api.TalendJob;
 
 /**
@@ -77,7 +78,7 @@ public class JobLauncherConnector extends AbstractConnector {
 
 		Class<?> clazz = null;
 		try{
-			clazz = Class.forName(jobClassName, true, Thread.currentThread().getContextClassLoader());
+			clazz = Thread.currentThread().getContextClassLoader().loadClass(jobClassName);
 		}catch(ClassNotFoundException cnfe){
 			throw new ConnectorException("The TalendJob class "+jobClassName+" has not been found in the process classpath.");
 		}
