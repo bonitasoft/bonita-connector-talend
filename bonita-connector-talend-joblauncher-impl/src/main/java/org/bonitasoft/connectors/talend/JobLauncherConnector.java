@@ -78,7 +78,7 @@ public class JobLauncherConnector extends AbstractConnector {
 
 		Class<?> clazz = null;
 		try{
-			clazz = Thread.currentThread().getContextClassLoader().loadClass(jobClassName);
+			clazz = JobLauncherConnector.class.getClassLoader().loadClass(jobClassName);
 		}catch(ClassNotFoundException cnfe){
 			throw new ConnectorException("The TalendJob class "+jobClassName+" has not been found in the process classpath.");
 		}
