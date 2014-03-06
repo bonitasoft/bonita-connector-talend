@@ -1,33 +1,36 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.bonitasoft.connectors</groupId>
 		<artifactId>bonita-connector-talend</artifactId>
-		<version>6.1.0-SNAPSHOT</version>
+		<version>1.0.0</version>
 	</parent>
+
 	<artifactId>bonita-connector-talend-joblauncher-impl</artifactId>
+	<version>1.0.1</version>
 
 	<properties>
 		<implementation.id>talend-job-launcher</implementation.id>
 	</properties>
 
 	<dependencies>
-        <dependency>
-            <groupId>dom4j</groupId>
-            <artifactId>dom4j</artifactId>
-            <version>1.6.1</version>
-        </dependency>
-        <dependency>
+		<dependency>
+			<groupId>dom4j</groupId>
+			<artifactId>dom4j</artifactId>
+			<version>1.6.1</version>
+		</dependency>
+		<dependency>
 			<groupId>jobtalend</groupId>
 			<artifactId>jobtalend</artifactId>
 			<version>2.0</version>
-            <scope>provided</scope>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>runjob</groupId>
 			<artifactId>runjob</artifactId>
 			<version>2.0</version>
-            <scope>provided</scope>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>systemRoutines</groupId>
@@ -49,12 +52,7 @@
 		<dependency>
 			<groupId>org.bonitasoft.connectors</groupId>
 			<artifactId>bonita-connector-talend-joblauncher-def</artifactId>
-			<version>6.1.0-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>org.bonitasoft.engine</groupId>
-			<artifactId>bonita-commons-test</artifactId>
-			<scope>test</scope>
+			<version>1.0.0</version>
 		</dependency>
 	</dependencies>
 
@@ -62,64 +60,22 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<configuration>
-					<properties>
-						<property>
-							<name>listener</name>
-							<value>org.bonitasoft.engine.jasper.annotation.CustomListener</value>
-						</property>
-					</properties>
-					<includes>
-						<include>org/bonitasoft/connectors/talend/test/JobLauncherConnectorTest.java</include>
-					</includes>
-				</configuration>
-			</plugin>
-			<plugin>
 				<artifactId>maven-assembly-plugin</artifactId>
-				<dependencies>
-					<dependency>
-						<groupId>org.bonitasoft.connectors</groupId>
-						<artifactId>bonita-connectors-assembly</artifactId>
-						<version>6.1.0-SNAPSHOT</version>
-					</dependency>
-				</dependencies>
-				<executions>
-					<execution>
-						<id>assemble</id>
-						<phase>package</phase>
-						<goals>
-							<goal>single</goal>
-						</goals>
-						<configuration>
-							<descriptorRefs>
-								<descriptorRef>connector-assembly</descriptorRef>
-							</descriptorRefs>
-						</configuration>
-					</execution>
-				</executions>
 			</plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <configuration>
-                    <excludeArtifactIds>*jobtalend*</excludeArtifactIds>
-                </configuration>
-            </plugin>
 			<plugin>
-				<groupId>com.google.code.maven-replacer-plugin</groupId>
-				<artifactId>replacer</artifactId>
-				<version>1.5.1</version>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<configuration>
+					<excludeArtifactIds>*jobtalend*</excludeArtifactIds>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
 
-    <repositories>
-        <repository>
-            <id>Local test repository</id>
-            <url>file://${project.basedir}/lib</url>
-        </repository>
-    </repositories>
-
+	<repositories>
+		<repository>
+			<id>Local test repository</id>
+			<url>file://${project.basedir}/lib</url>
+		</repository>
+	</repositories>
 </project>
