@@ -36,8 +36,6 @@ import routines.system.api.TalendJob;
  */
 public class JobLauncherConnector extends AbstractConnector {
 
-	private static final String RUN_JOB_METHOD = "runJob";
-
 	private static final String CONTEXT_PARAM_PREFIX = "--context_param:";
 
 	private static final String CONTEXT_PARAM_SEPARATOR = "=";
