@@ -6,7 +6,7 @@
 	<description>Implementation based on talend</description>
 	<implementationClassname>org.bonitasoft.connectors.talend.JobLauncherConnector</implementationClassname>
 	<implementationId>talend-job-launcher-impl</implementationId>
-	<implementationVersion>1.0.1</implementationVersion>
+	<implementationVersion>$implementation.version$</implementationVersion>
 
     $Dependencies$
 
