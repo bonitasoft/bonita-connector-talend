@@ -8,7 +8,7 @@
 	</parent>
 
 	<artifactId>bonita-connector-talend-joblauncher-impl</artifactId>
-	<version>1.0.1</version>
+	<version>1.0.2</version>
 
 	<properties>
 		<definition.version>1.0.0</definition.version>
