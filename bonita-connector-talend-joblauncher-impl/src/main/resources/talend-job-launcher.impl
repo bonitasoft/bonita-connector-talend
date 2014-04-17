@@ -2,7 +2,7 @@
 <implementation:connectorImplementation xmlns:implementation="http://www.bonitasoft.org/ns/connector/implementation/6.0">
 
 	<definitionId>talend-job-launcher</definitionId>
-	<definitionVersion$definition.version$</definitionVersion>
+	<definitionVersion>$definition.version$</definitionVersion>
 	<description>Implementation based on talend</description>
 	<implementationClassname>org.bonitasoft.connectors.talend.JobLauncherConnector</implementationClassname>
 	<implementationId>talend-job-launcher-impl</implementationId>
