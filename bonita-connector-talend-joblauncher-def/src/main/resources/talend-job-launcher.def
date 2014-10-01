@@ -9,7 +9,7 @@
 	<input name="projectName" type="java.lang.String" mandatory="true" />
 	<input name="jobName" type="java.lang.String" mandatory="true" />
 	<input name="jobVersion" type="java.lang.String" mandatory="true" />
-	<input name="jobParameters" type="java.lang.List" mandatory="false" />
+	<input name="jobParameters" type="java.util.List" mandatory="false" />
 	<input name="printOutput" type="java.lang.Boolean" defaultValue="false" />
 
 	<output name="bufferOutput" type="java.lang.Object" />
